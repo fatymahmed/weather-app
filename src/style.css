@@ -1,0 +1,45 @@
+body{
+    background-color: #ccc;
+}
+
+#weatherInfo{
+    color: rgb(43, 41, 48);
+    text-align: center;
+    background-color: darkgrey;
+    padding: 30px;
+    width: 300px;
+    height: 450px;
+    margin: 50px auto;
+    border: 1px solid gray;
+    border-radius: 30px;
+}
+
+#searchBox{
+    text-align: center;
+    margin: 10px auto;
+    font-size: 18px;
+}
+#searchBox:hover{
+    background-color: lightgrey;
+}
+
+#searchBtn{
+    padding: 5px;
+    margin: 10px auto;
+    font-size: 20px;
+    border-radius: 10px;
+    display: block;
+}
+
+#radioBtn{
+    margin: 10px;
+    text-align: center;
+}
+
+#searchBtn input{
+    margin: 5px auto;
+}
+
+#searchBtn:hover{
+    background-color: lightgrey;
+}

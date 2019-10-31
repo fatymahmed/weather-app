@@ -2,8 +2,6 @@ import { getWeather } from './index';
 
 const getCityName = () => {
 	const city = document.getElementById('searchBox').value;
-	console.log(document.getElementById('fahrenheitBtn').checked);
-	console.log(document.getElementById('celciusBtn').checked);
 	if (document.getElementById('fahrenheitBtn').checked===true){
 		getWeather(city,1);
 	}
@@ -14,10 +12,16 @@ const getCityName = () => {
 
 const displaySearchBox = () => {
 	const weatherInfo = document.getElementById('weatherInfo');
+	const results = document.createElement('div');
+	results.id = 'results';
+	results.innerHTML = '';
+	weatherInfo.innerHTML = `<h1>My weather app</h1>`;
 	const searchBox = document.createElement('input');
 	const searchBtn = document.createElement('button');
+	const radioBtn = document.createElement('div');
 	const fahrenheitBtn = document.createElement('input');
 	const celciusBtn = document.createElement('input');
+	radioBtn.id = 'radioBtn';
 	fahrenheitBtn.setAttribute('type', 'radio');
 	fahrenheitBtn.id = 'fahrenheitBtn';
 	celciusBtn.setAttribute('type', 'radio');
@@ -27,19 +31,34 @@ const displaySearchBox = () => {
 	F.innerHTML = 'F';
 	const C = document.createElement('span');
 	C.innerHTML = 'C';
+	F.id = 'F';
+	C.id = 'C';
 	celciusBtn.setAttribute('name', 'tempType');
 	searchBox.id = 'searchBox'
+	searchBtn.id = 'searchBtn'
 	searchBox.setAttribute('placeholder', 'city');
 	searchBtn.innerHTML = 'check weather';
+	radioBtn.appendChild(fahrenheitBtn);
+	radioBtn.appendChild(F);
+	radioBtn.appendChild(celciusBtn);
+	radioBtn.appendChild(C);
 	weatherInfo.appendChild(searchBox);
-	weatherInfo.appendChild(fahrenheitBtn);
-	weatherInfo.appendChild(F);
-	weatherInfo.appendChild(celciusBtn);
-	weatherInfo.appendChild(C);
+	weatherInfo.appendChild(radioBtn);
 	weatherInfo.append(searchBtn);
+	weatherInfo.appendChild(results);
 	searchBtn.addEventListener('click', getCityName);
+}
+const displayWeatherInfo= (temp, tempMin , tempMax, pressure, humidity) => {
+	const results = document.getElementById('results');
+	results.innerHTML = `<h2>temperature: ${temp.toFixed(2)}</h2>`;
+	results.innerHTML += `<h3>min temperature: ${tempMin.toFixed(2)}</h3>`; 
+	results.innerHTML += `<h3>max temperature: ${tempMax.toFixed(2)}</h3>`; 
+	results.innerHTML += `<h2>pressure: ${pressure}hPa</h2>`; 
+	results.innerHTML += `<h2>humidity: ${humidity}%</h2>`; 
+
 }
 
 export {
-	 displaySearchBox
+	 displaySearchBox,
+	 displayWeatherInfo
 };

@@ -14,29 +14,28 @@ async function getWeatherInCelcius(url)
         const response = await fetch(url, { mode: 'cors'});
         const result = await response.json();
 				const weatherInfo = result.main;
-				console.log(weatherInfo);
 				const temp = weatherInfo.temp - 273.15;
-				const tempMin = weatherInfo.temp_min;
-				const tempMax = weatherInfo.temp_max;
+				const tempMin = weatherInfo.temp_min - 273.15;
+				const tempMax = weatherInfo.temp_max - 273.15;
 				const pressure = weatherInfo.pressure;
 				const humidity = weatherInfo.humidity;
-				console.log(temp);
+				view.displayWeatherInfo(temp, tempMin , tempMax, pressure, humidity);
 		}
 		async function getWeatherInFahrenheit(url) 
     {
         const response = await fetch(url, { mode: 'cors'});
         const result = await response.json();
 				const weatherInfo = result.main;
-				console.log(weatherInfo);
 				const temp = (weatherInfo.temp - 273.15) * 9/5 + 32;
-				const tempMin = weatherInfo.temp_min;
-				const tempMax = weatherInfo.temp_max;
+				const tempMin = (weatherInfo.temp_min - 273.15) * 9/5 + 32 ;
+				const tempMax = (weatherInfo.temp_max - 273.15) * 9/5 + 32 ;
 				const pressure = weatherInfo.pressure;
 				const humidity = weatherInfo.humidity;
-				console.log(temp);
+				view.displayWeatherInfo(temp, tempMin , tempMax, pressure, humidity);
     }	
 
-document.onload(view.displaySearchBox());
+
+	document.onload(view.displaySearchBox());
 
 export {
 	getWeather
