@@ -1,11 +1,12 @@
 body{
     background-color: #ccc;
+    background: url(weather.jpg);
 }
 
 #weatherInfo{
-    color: rgb(43, 41, 48);
+    color: rgb(10, 51, 75);
     text-align: center;
-    background-color: darkgrey;
+    background-color: lightgray;
     padding: 30px;
     width: 300px;
     height: 450px;
