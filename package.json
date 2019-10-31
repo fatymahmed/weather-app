@@ -1,0 +1,23 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Using javascript to implement a weather app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatymahmed/weather-app.git"
+  },
+  "keywords": [],
+  "author": "Fatima Ahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fatymahmed/weather-app/issues"
+  },
+  "homepage": "https://github.com/fatymahmed/weather-app#readme",
+  "devDependencies": {
+    "webpack": "^4.41.2"
+  }
+}
