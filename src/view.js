@@ -2,7 +2,14 @@ import { getWeather } from './index';
 
 const getCityName = () => {
 	const city = document.getElementById('searchBox').value;
-	getWeatherInCelsius(city);
+	console.log(document.getElementById('fahrenheitBtn').checked);
+	console.log(document.getElementById('celciusBtn').checked);
+	if (document.getElementById('fahrenheitBtn').checked===true){
+		getWeather(city,1);
+	}
+	else {
+		getWeather(city,0);
+	}
 }
 
 const displaySearchBox = () => {
@@ -12,7 +19,9 @@ const displaySearchBox = () => {
 	const fahrenheitBtn = document.createElement('input');
 	const celciusBtn = document.createElement('input');
 	fahrenheitBtn.setAttribute('type', 'radio');
+	fahrenheitBtn.id = 'fahrenheitBtn';
 	celciusBtn.setAttribute('type', 'radio');
+	celciusBtn.id = 'celciusBtn';
 	fahrenheitBtn.setAttribute('name', 'tempType');
 	const F = document.createElement('span');
 	F.innerHTML = 'F';
