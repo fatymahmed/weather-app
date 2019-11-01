@@ -1,4 +1,3 @@
-import Icon from './background.jpeg';
 import { getWeather } from './index';
 
 const getCityName = () => {
