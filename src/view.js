@@ -14,6 +14,14 @@ const displaySearchBox = () => {
   const weatherInfo = document.getElementById('weatherInfo');
   const results = document.createElement('div');
   const imageBg = document.getElementById('imageBg');
+  const summary = document.createElement('div');
+  const locationDate = document.createElement('div');
+  locationDate.id = 'locationDate';
+  summary.id = 'summary';
+  summary.innerHTML = '';
+  locationDate.innerHTML = '';
+  imageBg.appendChild(summary);
+  imageBg.appendChild(locationDate);
   results.id = 'results';
   results.innerHTML = '';
   weatherInfo.innerHTML = '<h1>My weather app</h1>';
@@ -50,7 +58,14 @@ const displaySearchBox = () => {
   searchBtn.addEventListener('click', getCityName);
 };
 const displayWeatherInfo = (temp, tempMin, tempMax, pressure, humidity, option) => {
+  const city = document.getElementById('searchBox').value;
   const results = document.getElementById('results');
+  const summary = document.getElementById('summary');
+  const locationDate = document.getElementById('locationDate');
+  summary.innerHTML = `<h1> ${temp.toFixed(2)} &deg </h1>`;
+  locationDate.innerHTML = `<h2>${city}</h2>`;
+  const date = new Date();
+  locationDate.innerHTML += `<p>${date.toDateString()}</p>`;
   let unit = 'fahrenheit';
   if (option === 0) {
     unit = 'celcius';
