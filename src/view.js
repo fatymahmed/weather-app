@@ -1,3 +1,4 @@
+import Icon from './background.jpeg';
 import { getWeather } from './index';
 
 const getCityName = () => {
@@ -12,6 +13,7 @@ const getCityName = () => {
 const displaySearchBox = () => {
   const weatherInfo = document.getElementById('weatherInfo');
   const results = document.createElement('div');
+  const imageBg = document.getElementById('imageBg');
   results.id = 'results';
   results.innerHTML = '';
   weatherInfo.innerHTML = '<h1>My weather app</h1>';
@@ -43,15 +45,19 @@ const displaySearchBox = () => {
   radioBtn.appendChild(C);
   weatherInfo.appendChild(searchBox);
   weatherInfo.appendChild(radioBtn);
-  weatherInfo.append(searchBtn);
+  weatherInfo.appendChild(searchBtn);
   weatherInfo.appendChild(results);
   searchBtn.addEventListener('click', getCityName);
 };
-const displayWeatherInfo = (temp, tempMin, tempMax, pressure, humidity) => {
+const displayWeatherInfo = (temp, tempMin, tempMax, pressure, humidity, option) => {
   const results = document.getElementById('results');
-  results.innerHTML = `<h2>temperature: ${temp.toFixed(2)}</h2>`;
-  results.innerHTML += `<h3>min temperature: ${tempMin.toFixed(2)}</h3>`;
-  results.innerHTML += `<h3>max temperature: ${tempMax.toFixed(2)}</h3>`;
+  let unit = 'fahrenheit';
+  if (option === 0) {
+    unit = 'celcius';
+  }
+  results.innerHTML = `<h2>temperature: ${temp.toFixed(2)} &deg ${unit}</h2>`;
+  results.innerHTML += `<h3>min temperature: ${tempMin.toFixed(2)} &deg ${unit}</h3>`;
+  results.innerHTML += `<h3>max temperature: ${tempMax.toFixed(2)} &deg ${unit}</h3>`;
   results.innerHTML += `<h2>pressure: ${pressure}hPa</h2>`;
   results.innerHTML += `<h2>humidity: ${humidity}%</h2>`;
 };

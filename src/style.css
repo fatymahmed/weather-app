@@ -1,18 +1,29 @@
 body{
-    background-color: #ccc;
-    background: url(weather.jpg);
+    background: url(weather.jpeg);
+    margin: 0;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    height: 100vh;
+}
+
+#imageBg{
+    opacity: 0.3;
+    background-color: #261E2D;
 }
 
 #weatherInfo{
-    color: rgb(10, 51, 75);
+    opacity: 0.6;
+    background-color: #261E2D;
+    color: white;
     text-align: center;
-    background-color: lightgray;
     padding: 30px;
-    width: 300px;
-    height: 450px;
-    margin: 50px auto;
-    border: 1px solid gray;
-    border-radius: 30px;
+    border: 1px solid rgb(57, 59, 61);
+}
+h1{
+    font-weight: 150;
+}
+h2,h3{
+    font-weight: 100;
 }
 
 #searchBox{
@@ -30,6 +41,7 @@ body{
     font-size: 20px;
     border-radius: 10px;
     display: block;
+    
 }
 
 #radioBtn{
@@ -39,6 +51,7 @@ body{
 
 #searchBtn input{
     margin: 5px auto;
+    color: #91380D;
 }
 
 #searchBtn:hover{

@@ -10,7 +10,7 @@ async function getWeatherInCelcius(url) {
     const tempMax = weatherInfo.temp_max - 273.15;
     const { pressure } = weatherInfo;
     const { humidity } = weatherInfo;
-    view.displayWeatherInfo(temp, tempMin, tempMax, pressure, humidity);
+    view.displayWeatherInfo(temp, tempMin, tempMax, pressure, humidity, 0);
   } catch (err) {
     alert('city not found');
   }
@@ -26,7 +26,7 @@ async function getWeatherInFahrenheit(url) {
     const tempMax = ((weatherInfo.temp_max - 273.15) * 9) / 5 + 32;
     const { pressure } = weatherInfo;
     const { humidity } = weatherInfo;
-    view.displayWeatherInfo(temp, tempMin, tempMax, pressure, humidity);
+    view.displayWeatherInfo(temp, tempMin, tempMax, pressure, humidity, 1);
   } catch (err) {
     alert('city not found');
   }
