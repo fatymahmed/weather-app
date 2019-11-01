@@ -1,4 +1,4 @@
-import getWeather from './index';
+import { getWeather } from './index';
 
 const getCityName = () => {
   const city = document.getElementById('searchBox').value;
