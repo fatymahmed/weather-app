@@ -1,14 +1,28 @@
 # Weather App
-Using javascript to implement a weather app
 
 Used:
 - Javascript
 
-Installation:
-- clone the repository
-- run 'npm install' to install all dependencies
-- run 'npm run build' to generate latest js file.
 
-## Authors
+
+### Clone the project
+
+- git clone git@github.com:fatymahmed/weather-app.git
+
+### Install Dependencies
+
+- npm install
+
+### Set up environment variables:
+
+### Run Script (Development mode)
+
+- npm run dev
+
+### Run Script (Production mode)
+
+- npm run build
+
+## Author
 
 - Fatima Ahmed [http://github.com/fatymahmed]
