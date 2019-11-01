@@ -19,20 +19,6 @@
         "import/no-cycle": 0,
         "no-alert": 0,
         "no-unused-vars": 0,
-        "camelcase":0,
-        "func-names":0,
-        "no-template-curly-in-string": 0,
-        "no-eval":0,
-        "import/prefer-default-export": "off",
-        "no-return-assign":0,
-        "no-bitwise": 0,
-        "no-restricted-syntax": 0,
-        "max-len": 0,
-        "no-shadow": 0,
-        "no underscore-dangle": 0,
-        "guard-for-in":0,
-        "no-underscore-dangle": 0,
-        "no-multi-assign": 0,
-        "no-param-reassign": 0
+        "import/prefer-default-export": "off"
     }
 }
