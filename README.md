@@ -1,5 +1,5 @@
 # Weather App
-A simple weather forecast site that uses a [weather API](https://openweathermap.org/) .u
+A simple weather forecast site that uses a [weather API](https://openweathermap.org/)
 
 Used:
 - Javascript
@@ -15,10 +15,6 @@ Used:
 ### Install Dependencies
 
 - npm install
-
-### Run Script (Development mode)
-
-- npm run dev
 
 ### Run Script (Production mode)
 
