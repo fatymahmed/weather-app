@@ -1,6 +1,6 @@
 import * as view from './view';
 
-async function getWeatherInCelcius(url) {
+const getWeatherInCelcius = async (url) => {
   try {
     const response = await fetch(url, { mode: 'cors' });
     const result = await response.json();
@@ -14,7 +14,7 @@ async function getWeatherInCelcius(url) {
   } catch (err) {
     alert('city not found');
   }
-}
+};
 
 const getWeatherInFahrenheit = async (url) => {
   try {
