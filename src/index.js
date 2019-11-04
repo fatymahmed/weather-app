@@ -16,7 +16,7 @@ async function getWeatherInCelcius(url) {
   }
 }
 
-async function getWeatherInFahrenheit(url) {
+const getWeatherInFahrenheit = async (url) => {
   try {
     const response = await fetch(url, { mode: 'cors' });
     const result = await response.json();
@@ -30,7 +30,7 @@ async function getWeatherInFahrenheit(url) {
   } catch (err) {
     alert('city not found');
   }
-}
+};
 
 const getWeather = (location, option) => {
   if (option === 1) {
