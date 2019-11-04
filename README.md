@@ -1,8 +1,11 @@
 # Weather App
+A simple weather forecast site that uses a [weather API](https://openweathermap.org/)
 
 Used:
 - Javascript
-
+- HTML
+- CSS
+-
 
 
 ### Clone the project
@@ -12,12 +15,6 @@ Used:
 ### Install Dependencies
 
 - npm install
-
-### Set up environment variables:
-
-### Run Script (Development mode)
-
-- npm run dev
 
 ### Run Script (Production mode)
 
