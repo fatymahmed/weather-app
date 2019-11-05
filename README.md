@@ -1,9 +1,25 @@
 # Weather App
-Using javascript to implement a weather app
+A simple weather forecast site that uses a [weather API](https://openweathermap.org/)
 
 Used:
 - Javascript
+- HTML
+- CSS
+-
 
-## Authors
+
+### Clone the project
+
+- git clone git@github.com:fatymahmed/weather-app.git
+
+### Install Dependencies
+
+- npm install
+
+### Run Script (Production mode)
+
+- npm run build
+
+## Author
 
 - Fatima Ahmed [http://github.com/fatymahmed]
