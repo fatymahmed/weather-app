@@ -34,9 +34,9 @@ const getWeatherInFahrenheit = async (url) => {
 
 const getWeather = (location, option) => {
   if (option === 1) {
-    getWeatherInFahrenheit(`http://api.openweathermap.org/data/2.5/weather?q=${document.getElementById('searchBox').value}&APPID=e35c92eefa655c7d2e50f8101fc984ca`);
+    getWeatherInFahrenheit(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${document.getElementById('searchBox').value}&APPID=e35c92eefa655c7d2e50f8101fc984ca`);
   } else {
-    getWeatherInCelcius(`http://api.openweathermap.org/data/2.5/weather?q=${document.getElementById('searchBox').value}&APPID=e35c92eefa655c7d2e50f8101fc984ca`);
+    getWeatherInCelcius(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${document.getElementById('searchBox').value}&APPID=e35c92eefa655c7d2e50f8101fc984ca`);
   }
 };
 document.onload(view.displaySearchBox());
