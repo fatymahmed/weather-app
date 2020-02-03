@@ -4,13 +4,14 @@ const getWeatherInCelcius = async (url) => {
   try {
     const response = await fetch(url, { mode: 'cors' });
     const result = await response.json();
+    const mainweather = result.weather[0].main;
     const weatherInfo = result.main;
     const temp = weatherInfo.temp - 273.15;
     const tempMin = weatherInfo.temp_min - 273.15;
     const tempMax = weatherInfo.temp_max - 273.15;
     const { pressure } = weatherInfo;
     const { humidity } = weatherInfo;
-    view.displayWeatherInfo(temp, tempMin, tempMax, pressure, humidity, 0);
+    view.displayWeatherInfo(temp, tempMin, tempMax, pressure, humidity, 0, mainweather);
   } catch (err) {
     alert('city not found');
   }

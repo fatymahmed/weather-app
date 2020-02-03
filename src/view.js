@@ -56,7 +56,8 @@ const displaySearchBox = () => {
   weatherInfo.appendChild(results);
   searchBtn.addEventListener('click', getCityName);
 };
-const displayWeatherInfo = (temp, tempMin, tempMax, pressure, humidity, option) => {
+const displayWeatherInfo = (temp, tempMin, tempMax, pressure, humidity, option, weather) => {
+  const image = document.getElementById('body');
   const city = document.getElementById('searchBox').value;
   const results = document.getElementById('results');
   const summary = document.getElementById('summary');

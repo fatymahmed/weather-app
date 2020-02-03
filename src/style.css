@@ -1,5 +1,7 @@
 body{
-    background: url(weather.jpeg);
+    background: url('https://images.unsplash.com/photo-1499355940597-5601b9869168?ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     margin: 0;
     display: grid;
     grid-template-columns: 65% 35%;
